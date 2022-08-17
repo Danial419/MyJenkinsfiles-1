@@ -22,11 +22,18 @@ pipeline {
         }
     
      
-        stage('Release') {
+        stage('Maintaince') {
+            steps {
+                echo 'Maintaince...'
+            }
+        }
+	    
+	 stage('Release') {
             steps {
                 echo 'Releasing...'
             }
         }
+	    
 	}
    
 }
