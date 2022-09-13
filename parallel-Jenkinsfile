@@ -16,7 +16,7 @@ pipeline {
                     echo "Planning..."
                     }
                    
-                },
+                }
             stage('Implementation') {
                    
                 steps {
