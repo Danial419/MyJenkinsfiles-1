@@ -4,10 +4,7 @@ pipeline {
        
        stage('Intial') {
                    
-                    steps {
-                        echo "Initlinzing..."
-                    }
-                }
+                 
 
         parallel{
             stage('Planning') {
@@ -24,6 +21,7 @@ pipeline {
                     }
                     
                 }
+        }
         }
 
              stage('Deploy') {
