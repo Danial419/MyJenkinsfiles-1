@@ -21,7 +21,15 @@ pipeline {
                     }
                     
                 }
-        }
+
+                 stage('testing') {
+                   
+                steps {
+                    echo "testing..."
+                    }
+                   
+                }
+             }
         }
 
              stage('Deploy') {
