@@ -2,30 +2,29 @@ pipeline {
     agent any
     stages {
        
-
        stage('Intial') {
                    
                     steps {
                         echo "Initlinzing..."
                     }
-                    
                 }
-            parallel(
-                stage('Planning') {
+
+        parallel{
+            stage('Planning') {
                    
-                    steps {
-                        echo "Planning..."
+                steps {
+                    echo "Planning..."
                     }
                    
                 },
-                stage('Implementation') {
+            stage('Implementation') {
                    
-                    steps {
-                        echo "Implementing..."
+                steps {
+                    echo "Implementing..."
                     }
                     
                 }
-            )
+        }
 
              stage('Deploy') {
                    
