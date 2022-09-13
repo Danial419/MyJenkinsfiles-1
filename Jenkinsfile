@@ -8,19 +8,19 @@ pipeline {
             }
         }
     
-    
+    parallel firstBranch: {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
             }
         }
-        
+        }, secondBranch: {
         stage('Testing') {
             steps {
                 echo 'Testing...'
             }
         }
-    
+    }
      
         stage('Maintaince') {
             steps {
