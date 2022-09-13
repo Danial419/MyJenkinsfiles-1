@@ -1,7 +1,15 @@
 pipeline {
-    agent none
+    agent any
     stages {
        
+
+       stage('Intial') {
+                   
+                    steps {
+                        echo "Initlinzing..."
+                    }
+                    
+                }
             parallel(
                 stage('Planning') {
                    
