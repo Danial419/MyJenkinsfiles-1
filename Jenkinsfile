@@ -7,8 +7,7 @@ pipeline {
                 echo 'Building...'
             }
         }
-    
-    parallel  {
+   
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
@@ -19,7 +18,7 @@ pipeline {
             steps {
                 echo 'Testing...'
             }
-        }
+        
     }
      
         stage('Maintaince') {
