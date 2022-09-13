@@ -2,7 +2,7 @@ pipeline {
     agent none
     stages {
        
-            parallel {
+            parallel(
                 stage('Planning') {
                    
                     steps {
@@ -17,7 +17,7 @@ pipeline {
                     }
                     
                 }
-            }
+            )
 
              stage('Deploy') {
                    
