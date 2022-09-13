@@ -1,6 +1,14 @@
 pipeline {
     agent any
     stages {
+    
+    stage('REquirement Gathering') {
+                   
+                steps {
+                    echo "REquirements..."
+                    }
+                   
+                }
        
        stage('Intial') {
                    
@@ -36,6 +44,14 @@ pipeline {
                    
                     steps {
                         echo "Deploying..."
+                    }
+                    
+                }
+
+                 stage('Production') {
+                   
+                    steps {
+                        echo "Production..."
                     }
                     
                 }
